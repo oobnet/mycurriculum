@@ -8,7 +8,7 @@ export default async function  Home() {
   function RenderXp({item}) {
   
     return (
-      <div className="card bg-dark border border-white  rounded">
+      <div className="card bg-dark  rounded mt-1">
       <div className="card-body">
         <h5 className="card-title">{item.emp}</h5>
         <h6 className="card-subtitle mb-2 text-body-secondary">Função: {item.fn}</h6>
@@ -29,10 +29,8 @@ export default async function  Home() {
       <div className="col-md-12 text-center">
         <h3 className="card-title">ODAIR DE OLIVEIRA BRITO</h3>
       </div>
-      <div className="col-md-3">
-        <img src={Utils?.avatar} className="card" width="100%" />
-      </div>
-      <div className="col-md-9 border border-white  rounded p-1">
+     
+      <div className="col-md-10  rounded p-1">
           <p>
             Analista de Sistema P/S com sede em Planaltina, Distrito Federal, Brasil. <br />
             Experiência sólida em gerenciamento de projetos e testes, com habilidades distintas em diferentes áreas. <br /> <br />
@@ -70,14 +68,17 @@ export default async function  Home() {
           </ul>
          
       </div>
-      <div className="col-md-12 mt-2 p-1 border border-white  rounded">
+      <div className="col-md-2">
+        <img src={Utils?.avatar} className="card" width="100%" />
+      </div>
+      <div className="col-md-12 mt-2 p-1  rounded">
         <p className="h6">Certificados</p>
         <ul> 
           {Utils?.arrayCert.map((resp,index) => <li key={index}>{resp.toLowerCase()}</li>) }
         </ul>
       </div>
 
-      <div className="col-md-12 mt-2 p-4 border border-white  rounded">
+      <div className="col-md-12 mt-2 p-4  rounded">
         <p className="h6 mb-3">Experiências:</p>
         {
           Utils?.experiencie.map( (resp,index) => <RenderXp item={resp} />)
